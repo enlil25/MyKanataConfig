@@ -1,0 +1,8 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc ' 
+ )
+(deflayer layer-1
+  (one-shot 5000 lsft)
+)

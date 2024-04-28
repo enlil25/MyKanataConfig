@@ -1,0 +1,17 @@
+(defsrc a s d f g)
+(deflayer mi-layer
+   (one-shot 10000 lsft) 
+   (one-shot 10000 (layer-toggle mi-layer2) )
+    d f g
+)
+(deflayer mi-layer2
+    x y z p ;
+)
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+(defsrc a s)
+(deflayer mi-layer
+  (tap-dance 200 (x y z p) )
+  (tap-dance-eager 200 ( x y z p) )
+)

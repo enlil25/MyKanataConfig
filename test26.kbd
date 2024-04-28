@@ -1,0 +1,15 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+  lsft 
+  ;;rsft
+)
+(deflayer milayer
+  ;;(fork lsft (caps-word 2000 ) (rsft) )
+  ;;(fork lsft (one-shot 5000 lsft ) (rsft) )
+  ;;(fork rsft (one-shot 5000 lsft ) (lsft) )
+  
+  (fork lsft ( multi (caps-word 5000) p ) (rsft) )
+  
+)

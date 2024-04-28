@@ -1,0 +1,34 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc f j )
+(deflayer default
+  @f @j
+)
+
+(defalias
+  ;;chsft (chord example lsft)
+  ;;chrsft (chord example rsft)
+  ;;f (tap-hold 200 200 f lsft)
+  ;;j (tap-hold 200 200 j rsft)
+  ;;f (tap-hold 200 200 f @chsft)
+  ;;j (tap-hold 200 200 j @chrsft)
+    f ( chord example f)
+    j ( chord example j)
+)
+
+(defchords example 500
+  ;;(lsft ) lsft
+  ;;(rsft ) rsft
+  ;;(lsft rsft ) (caps-word 4000)
+  
+  ;;(f )  f
+  ;;(j )  j
+  ;;(f j) x
+   (f ) (tap-hold 200 200 f lsft)
+   (j ) (tap-hold 200 200 j rsft)
+   (f j ) (tap-hold 200 200 lsft (caps-word 4000) )
+
+  
+)

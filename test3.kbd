@@ -1,0 +1,32 @@
+#|
+(defsrc spc)
+(deflayer-custom-map (base-layer) 
+  ´´: {
+  + : }
+  { : ´´
+  } : +
+)
+
+(deflocalkeys-win
+  ´´ 186 
+  +  187
+  {  222
+  }  191
+)
+|#
+
+#|
+;; defsrc is still necessary
+(defsrc spc)
+(deflayer-custom-map (base-layer)
+  caps : esc
+)
+|#
+
+;;usando la accion live reload
+(defsrc q w e grv 1 2 )
+(deflayer mi-layer 
+        n m k lrld lrld-prev lrld-next
+		
+)
+

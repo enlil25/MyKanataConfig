@@ -1,0 +1,11 @@
+(defsrc
+  a b c d e
+)
+
+(deflayer remap-only-c-to-d
+  x _ d _ (layer-toggle remap-2)
+)
+
+(deflayer remap-2
+  _ _ d _ _ 
+)

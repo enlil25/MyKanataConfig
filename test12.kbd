@@ -1,0 +1,6 @@
+(defsrc a s d f g 
+    h j k)
+(deflayer mi-layer
+     mlft mmid mrgt mfwd mbck 
+  mltp mmtp mrtp
+)

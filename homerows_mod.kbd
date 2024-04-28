@@ -1,0 +1,57 @@
+;; Home row mods QWERTY example with more complexity.
+;; Some of the changes from the basic example:
+;; - when a home row mod activates tap, the home row mods are disabled
+;;   while continuing to type rapidly
+;; - tap-hold-release helps make the hold action more responsive
+;; - pressing another key on the same half of the keyboard
+;;   as the home row mod will activate an early tap action
+
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+  a   s   d   f   j   k   l   ;
+)
+(defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
+  ;; fingers faster.
+  tap-time 200
+  hold-time 150
+
+  left-hand-keys (
+    b l d w z
+    n r t s g
+    q m v c x
+  )
+  right-hand-keys (
+    ' f o u j
+    y h a e i
+    p k . - /
+  )
+)
+(deflayer base
+  @n  @r  @t  @s  @h  @a  @e  @i
+)
+
+(deflayer nomods
+  n   r   t   s   h   a   e   i
+)
+(deffakekeys
+  to-base (layer-switch base)
+)
+(defalias
+  tap (multi
+    (layer-switch nomods)
+    (on-idle-fakekey to-base tap 20)
+  )
+
+  n (tap-hold-release-keys $tap-time $hold-time (multi n @tap) lmet $left-hand-keys)
+  r (tap-hold-release-keys $tap-time $hold-time (multi r @tap) lalt $left-hand-keys)
+  t (tap-hold-release-keys $tap-time $hold-time (multi t @tap) lctl $left-hand-keys)
+  s (tap-hold-release-keys $tap-time $hold-time (multi s @tap) lsft $left-hand-keys)
+  h (tap-hold-release-keys $tap-time $hold-time (multi h @tap) rsft $right-hand-keys)
+  a (tap-hold-release-keys $tap-time $hold-time (multi a @tap) rctl $right-hand-keys)
+  e (tap-hold-release-keys $tap-time $hold-time (multi e @tap) ralt $right-hand-keys)
+  i (tap-hold-release-keys $tap-time $hold-time (multi i @tap) rmet $right-hand-keys)
+)

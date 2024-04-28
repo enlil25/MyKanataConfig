@@ -1,0 +1,21 @@
+(defcfg
+ process-unmapped-keys yes
+)
+
+(defsrc a s d lsft '
+)
+(deflayer layer-1
+   ;;(one-shot 10000 lsft)
+    (one-shot 10000 (layer-toggle layer-2))
+     s d
+    (one-shot 5000 lsft)
+    (one-shot 5000 lsft)
+)
+
+(deflayer layer-2
+   p k ; _ _
+)
+
+
+
+

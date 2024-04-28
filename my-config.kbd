@@ -1,0 +1,253 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+  grv    1  2  3  4  5  6  7  8  9  0  -   =  bspc
+  tab    q  w  e  r  t  y  u  i  o  p  [   ]
+  caps   a  s  d  f  g  h  j  k  l  ;  '   \  ent
+  lsft   z  x  c  v  b  n  m  ,  .  /    rsft
+  lctl fn lmeta lalt     spc     ralt rctl                               
+) 
+
+(deflayer graphite-angle-vc
+  @grv   1   2   3   4   5  6  7   8   9  0  -  =    bspc
+  tab    b   l   d   w   z  '  f   o   u  j  @sft  bks
+  bks   @n  @r  @t  @s  g  y  @h  @a  e  i  ent  \    ent
+  lsft   q   m   v   c   x  p  k   .   -  /   rsft
+  lctl _  _  lalt     @spc     ralt rctl
+)
+
+(deflayer graphite-angle-vc-no-mods
+  @grv   1   2   3  4  5  6  7  8  9  0  -  =  bspc
+  tab    b   l   d  w  z  '  f  o  u  j  ;  @sft
+  @cw    n   r   t  s  g  y  h  a  e  i  ,  \  ent
+  lsft   q   m   v  c  x  p  k  .  -  /    rsft
+  lctl _  _  lalt     spc     ralt rctl
+)
+
+(deflayer graphite-angle-vc-simple
+  @grv   1   2   3  4  5  6  7  8  9  0  -  =  bspc
+  tab    b   l   d  w  z  '  f  o  u  j  ;  XX
+  caps   n   r   t  s  g  y  h  a  e  i  ,  \  ent
+  lsft   q   m   v  c  x  p  k  .  -  /    rsft
+  lctl _  _  lalt     spc     ralt rctl
+)
+
+(deflayer graphite-mod2
+  @grv   1   2   3  4  5  6  7  8  9  0  -  =  bspc
+  tab    b   l   d  w  z  XX  ' f  o  u  j   @sft 
+  caps   n   r   t  s  g  XX  y  h  a  e  i  ,  ent
+  lsft   q   m   v  c  x  XX  p  k  .  -   / 
+  lctl _  _  lalt     spc     @spc rctl
+)
+
+
+
+(deflayer qwerty-en
+  @grv   _  _  _  _  _  _  _  _  _  _  _  _  _
+  _      _  _  _  _  _  _  _  _  _  _  _  _  
+  _      _  _  _  _  _  _  _  _  _  _  _  _  _
+  _      _  _  _  _  _  _  _  _  _  _    _  
+  _  _ _   _        _        _ _
+) 
+
+(deflayer layouts
+  _     @qw @gf @gfn lrld @test  _  _  _  _  _  _  _  _
+  _      _  _    _    _  _  _  _  _  _  _  _  _  
+  _      _  _  _  _   _  _  _  _  _  _  _  _  _
+  _      _  _  _  _   _  _  _  _  _  _    _  
+  _  _ _  _        _        _ _
+)
+ 
+(deflayer symbols
+  _      _   _   _  _  _   _   _   _   _  _  _  _  _
+  _      XX  @_  -  '  XX  XX  @{  @}  @dq @& @! @$  
+  _      @:  @@  [  ]  XX  @+  @s9 @s0 =  ;  @# XX _ 
+  _      XX  XX  XX XX XX  @<  @>  ,   @? @! _  
+  XX  _ _  _        spc        _ _
+) 
+
+(deflayer symbols-2
+  _      `  @s9 @s0 ;   ,   _   _   _   _   _  _  _ _
+  @!      @{  '   @dq  @}  @?  XX  @{  @}  @dq @& @! @$  
+  @#      @^  =   @_  @$  @*  @+  @s9 @s0 =  ;  @# XX _ 
+  @@      @<  @|  -   @>  /  @<  @>  ,   @? @! _  
+  @~  @& [  ]        @+        _ _
+) 
+
+(deflayer symbols-3
+  _       `  @s9 @s0 ;   ,   _   _   _   _   _  _  _ _
+  @!      @{  '   @dq  @}  @?  XX  @{  @}  ; @& @! @$  
+  @#      @^  =   @_  @$  @*  @+  bks @s9 spc  ent  @# XX _ 
+  @@      @<  @|  -   @>  /  .  @*  =   @? @! _  
+  @~   @& [  ]        @+        _ _
+) 
+
+(deflayer symbols-4
+  _       `  @s9 @s0 ;   ,   _   _   _   _   _  _  _ _
+  @!      @{  '   @dq  @}  @?  XX  @%  @}  , @& @! @$  
+  @#      @^  =   @_  @$  @*  @:  bks @s9 spc  ent  @# XX _ 
+  @@      @<  @|  -   @>  /  .  @*  =   @? @! _  
+  @~   @& [  ]        @+        _ _
+)
+
+(deflayer symbols-5
+  _       `  @s9 @s0 ;   ,   _   _   _   _   _  _  _ _
+  @!      @{  '   @dq  @}  @?  XX  spc  up  bks @& @! @$  
+  @#      @^  =   @_  @$  @*  @:  lft down rght  ent  @# XX _ 
+  @@      @<  @|  -   @>  /  .  @*  =   @? @! _  
+  @~   @& [  ]        @+        _ _
+)  
+
+;;symbols2
+(deflayer symbols2
+  _       `  @s9 @s0 ;   ,   _   _   _   _   _  _  _ _
+  @!      @{  '   @dq  @}  @?  XX  @%  @}  , @& @! @$  
+  @#      @^  =   ,  ;  @*  @:  bks @s9 spc  ent  @# XX _ 
+  @@      @<  @|  -   @>  /  .  @*  =   @? @! _  
+  @~   @& [  ]        @+        _ _
+) 
+
+(deflayer misc
+  _      _  _  _  _  _  _  _   _    _    _  _  _  _
+  _      _  spc bks  ent  _  _  ent  up  ent  del  _  _  
+  _      _  _  _  _  _  bks lft down rght bks  _  _ _
+  _      _  _  _  _  _  _  _   _     _    _    _  
+  _  _ _  _        _        _ _
+) 
+
+(deflayer misc-2
+  _      _  _  _  _  _  _  _   up    _    _  _  _  _
+  _      _  _  _  _  _  _  lft  down  rght  del  _  _  
+  _      _  _  _  _  _  _  del bks rght bks  _  _ _
+  _      _  _  _  _  _  _  _   _     _    _    _  
+  _  _ _  _        _        _ _
+) 
+
+(deflayer numbers
+  _      _  _  _  _  _  _  7  8  9  _    _  _  _
+  _      _  _  _  _  _  _  4  5  6  min  _  _  
+  _      _  _  _  _  _  _  1  2  3  +    _  _  _
+  _      _  _  _  _  _  0  0  .  /  ent  _  
+  _ _ _   _        _        _ _
+)
+
+(deflayer numbers-2
+  _      _  _  _  _  _  _  @*  /  XX  _    _  _  _
+  _      _  _  _  _  _  _  7   8  9   min  _  _  
+  _      ent  _  bks  spc  _  _  4   5  6   +    _  _  _
+  _      _  _  _  _  _  0  1   2  3   ent  _  
+  _ _ _   _        .        _ _
+)
+
+
+
+;;deflocalkeys-win
+
+(deflocalkeys-win
+    ;;kana 255
+	fn 255
+	
+)
+
+
+;; crear capa para vocales con tilde y letra n
+;; queda pendiente
+
+
+;;alias para chords de salida
+;;utilizado por el layer de simbolos
+(defalias
+   ~  S-`
+   !  S-1
+   @  S-2
+   #  S-3
+   $  S-4
+   %  S-5
+   ^  S-6
+   &  S-7
+   *  S-8
+   s9 S-9 ;; (
+   s0 S-0 ;;  )
+   _  S--
+   +  S-=
+  
+   {  S-[
+   }  S-]
+   :  S-;
+   dq S-' ;; "
+   |  S-\ 
+
+   <  S-, 
+   >  S-. 
+   ?  S-/
+)
+
+
+;;layers toggle and
+;;layers switch
+;;alias para home rows y
+(defalias
+  lay (layer-toggle layouts)
+  sym (layer-toggle symbols-5)
+  msc (layer-toggle misc)
+  num (layer-toggle numbers-2)
+  
+  qw  (layer-switch qwerty-en)
+  gf  (layer-switch graphite-angle-vc)
+  gfn (layer-switch graphite-angle-vc-no-mods )
+  test (layer-switch graphite-mod2)
+  
+  sym2 (layer-toggle symbols2)
+  sp (layer-toggle symbols-4)
+
+
+
+  n (tap-hold-release 200 200 n @msc )   ;;n (tap-hold-release 200 200 n @msc )
+  r (tap-hold-release 200 200 r @num )
+  t (tap-hold-release 200 200 t @sym )
+  s (tap-hold-release 200 200 s lsft)
+
+  ;;h (tap-hold-release 200 200 h lsft)
+  h (tap-hold-release 200 200 h @sym2)
+  a (tap-hold-release 200 200 a @sym )
+  i (tap-hold-release 200 200 i @sym )
+  
+  grv (tap-hold-release 200 200 ` @lay) 
+  
+  spc (tap-hold-release 200 200 spc @sym )
+
+  cc (caps-word-custom
+       4000
+       (a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9)
+       (kp0 kp1 kp2 kp3 kp4 kp5 kp6 kp7 kp8 kp9 bspc del up down left rght lsft -)
+      )
+  ;;cw (tap-hold 200 200 (caps-word 2000) lsft )
+  cw (tap-hold 200 200 @cc lsft )
+  
+
+)
+
+;;alias en tecla para one-shot de shift
+;;util para capitalizar palabras
+;;y cuando hay un solo simbolo en una palabra
+(defalias
+  sft (one-shot 5000 rsft) 
+
+)
+
+;;input chords
+#|
+(defalias
+  sspc (chord example spc)
+  ss9 (chord example @s9) 
+)
+
+(defchords example 500 
+  (spc) XX
+  (@s9) @s9
+  (spc @s9) @{
+)
+|#
+
+

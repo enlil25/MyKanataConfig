@@ -1,0 +1,10 @@
+(defsrc } { ' ¿)
+(deflayer mi-layer 
+   S-} S-{ S-' S-¿ )
+
+(deflocalkeys-win
+  } 191
+  { 222
+  ' 219
+  ¿  221
+ )

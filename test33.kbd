@@ -1,0 +1,12 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+  a 1 d f
+)
+(deflayer milayer
+  (unmod a)
+  (unshift 1)
+  (macro (unmod `) e)
+  (multi lctl home ent up) ;;ejemplo fuera de lugar
+)

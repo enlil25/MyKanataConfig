@@ -1,0 +1,12 @@
+(defsrc a s d f)
+(deflayer mi-layer 
+       _ _ _ @f)
+
+(defalias
+  f (multi lsft (layer-toggle mi-layer2) )
+)
+
+(deflayer mi-layer2
+
+  (release-key lsft) 2 3 4 
+)

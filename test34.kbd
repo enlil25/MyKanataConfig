@@ -1,0 +1,10 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+ a b
+)
+(deflayer milayer
+ (dynamic-macro-record 0)
+ (dynamic-macro-play 0)
+)

@@ -1,0 +1,8 @@
+(defcfg 
+  process-unmapped-keys yes
+)
+(defsrc a s)
+(deflayer mi-layer
+  (arbitrary-code 700) ;; el valor va de 0-767
+  (arbitrary-code 600)
+)

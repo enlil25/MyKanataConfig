@@ -1,0 +1,33 @@
+(defsrc
+  |       1    2    3    4    5    6    7    8    9    0    '    ¿  bspc
+  tab     q    w    e    r    t    y    u    i    o    p    ´´   + 
+  caps    a    s    d    f    g    h    j    k    l    ñ    {    }  ent
+  lsft <  z    x    c    v    b    n    m    ,    .    -    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer graphite
+  |       1    2    3    4    5    6    7    8    9    0    S-'  S-¿  bspc
+  tab     b    l    d    w    z    '    f    o    u    j    S-,  S-0  
+  caps    n    r    t    s    g    y    h    a    e    i    ,    C-A-'  ent
+  lsft <  q    m    v    c    x    p    k    .    -    S-7  rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+;; el codigo de la tecla tiene el mismo valor en dos distribuciones qwerty ( español e ingles)
+;; segun el ejecutable proporcionado por kanata
+;; 192 en distribucion qwerty ingles es ` (grv)
+;; 192 en distribucion qwerty español es ñ
+(deflocalkeys-win  
+   ñ  192 
+   |  220
+   ´´ 186
+   +  187
+   '  219
+   ¿  221
+   [  33
+   }  191
+   {  222
+   <  226
+   ,  188 
+)

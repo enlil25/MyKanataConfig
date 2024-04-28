@@ -1,0 +1,38 @@
+(defcfg 
+  process-unmapped-keys yes
+)
+(defsrc a s d f g h j k)
+
+(defalias
+  0 0
+  8 8
+  : S-;
+  🙃 (unicode 🙃)
+  1 1
+  lch (macro h t t p @: / / l o c a l h o s t @: @8 @0 @8 @0 ) ;;http://localhost:8080
+  
+  ;;I am HAPPY my FrIeNd   🙃 
+  hpy (macro S-i spc a m spc S-(h a p p y) spc m y S-f r S-i e S-n d spc @🙃 ent)
+
+  ;; alt-tab(x3) y alt-shift-tab(x3) con macro 
+  tfd (macro A-(tab 200 tab 200 tab) )
+  tbk (macro A-S-(tab 200 tab 200 tab) )
+
+  mrc (macro-release-cancel @1 500 bspc S-1 500 bspc S-2)
+  mr1 (macro-repeat a 80)
+  mr2 (macro-repeat-release-cancel [ 80)
+
+
+)
+
+(deflayer mi-layer
+    (macro h 500 o 500 l 500 a)
+    @lch
+    @hpy
+    @tfd
+    @tbk
+    @mrc
+    @mr1
+    @mr2
+)
+

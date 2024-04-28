@@ -1,0 +1,17 @@
+(defalias
+  atl (multi alt (layer-while-held alted-with-exceptions))
+  lft (multi (release-key alt) left) ;; suelta alt si la mantienes pulsada y también pulsa izquierda
+  rgt (multi (release-key alt) rght) ;; suelta alt si la mantienes pulsada y pulsa también rght
+)
+
+(defsrc
+  alt a s d f
+)
+
+(deflayer base
+  @atl _ _ _ (multi xx y z)
+)
+
+(deflayer alted-with-exceptions
+  _ _ _ @lft @rgt
+)

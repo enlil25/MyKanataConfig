@@ -1,0 +1,5 @@
+(defsrc a s)
+(deflayer mi-layer
+  (setmouse 20 20)
+  (setmouse 40000 40000)
+)

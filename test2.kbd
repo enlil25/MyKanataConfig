@@ -1,0 +1,18 @@
+;;´´+{}
+(defsrc 
+  ´´ + {  }  grv 1 2
+) 
+
+(deflayer qwerty_mod
+  {  } ´´ +  lrld lrld-prev lrld-next
+
+) 
+
+(deflocalkeys-win
+  ´´ 186 
+  +  187
+  {  222
+  }  191
+)
+
+

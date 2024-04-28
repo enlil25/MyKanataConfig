@@ -1,0 +1,7 @@
+(defsrc a s d f)
+(deflayer mi-layer
+  (movemouse-left 200 10)
+  (movemouse-right 200 10)
+   (movemouse-speed 50)
+   (movemouse-speed 200)
+)

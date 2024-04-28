@@ -1,0 +1,5 @@
+(defsrc a s)
+(deflayer mi-layer
+  (movemouse-left 200 10)
+  (movemouse-accel-left 200 200 1 10)
+)

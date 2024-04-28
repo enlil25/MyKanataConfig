@@ -1,0 +1,4 @@
+(defsrc 1 a s d f g h j)
+(deflayer mi-layer 
+     lrld a XX XX (unicode 😀) (unicode 🙁) (unicode 🤲) (unicode 🔣)
+)

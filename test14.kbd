@@ -1,0 +1,6 @@
+(defsrc a s d f)
+(deflayer mi-layer
+  (mwheel-up 200 120) (mwheel-down 400 120)
+  (mwheel-left 200 120) (mwheel-right 200 120)
+)
+

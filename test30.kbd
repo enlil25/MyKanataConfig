@@ -1,0 +1,10 @@
+(defcfg
+ process-unmapped-keys yes
+)
+(defsrc s d f )
+(deflayer milayer
+  (tap-hold 5000 5000 c lsft )
+  (tap-hold-press 5000 5000 c lsft)
+  (tap-hold-release 5000 5000 c lsft)
+)
+  

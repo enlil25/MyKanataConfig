@@ -1,0 +1,4 @@
+(defsrc f1 f2 lft rght ins prtsc del)
+(deflayer milayer
+   a b c d e f g
+)

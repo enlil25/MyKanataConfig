@@ -1,0 +1,13 @@
+;;usando la accion live reload
+(defsrc a s d grv 1 2 3 4)
+(deflayer mi-layer 
+        x y z lrld lrld-prev lrld-next (layer-switch mi-layer2) (layer-toggle mi-layer2)
+		
+)
+
+(deflayer mi-layer2
+    p o i lrld lrld-prev lrld-next (layer-switch mi-layer) 4
+)
+
+
+

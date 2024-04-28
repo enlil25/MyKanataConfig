@@ -1,0 +1,9 @@
+(defcfg
+ process-unmapped-keys yes
+)
+(defsrc
+  k
+)
+(deflayer mi-layer
+   (fork k b (lsft rsft))
+)

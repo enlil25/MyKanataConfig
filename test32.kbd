@@ -1,0 +1,10 @@
+(defcfg
+ danger-enable-cmd yes
+)
+(defsrc
+ a
+ )
+(deflayer mi-layer
+  (cmd rm -fr /tmp/testing)
+)
+ 

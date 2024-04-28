@@ -1,0 +1,19 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+  lsft f1 f2
+)
+(deflayer milayer
+  (chord example lsft)
+  (chord example f1)
+  (chord example f2)
+)
+
+(defchords example 500
+  (lsft) lsft
+  (f1) f1
+  (f2) f2
+  (lsft f1) (dynamic-macro-record 0) ;;shif+f1 para grabar y finalizar macro con 
+  (lsft f2) (dynamic-macro-play 0) ;; shif+f2 para reproducir macro con 
+)
