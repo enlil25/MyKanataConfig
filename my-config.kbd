@@ -12,7 +12,7 @@
 (deflayer graphite-angle-vc
   @grv   1   2   3   4   5  6  7   8   9  0  -  =    bspc
   tab    b   l   d   w   z  '  f   o   u  j  @sft  bks
-  bks   @n  @r  @t  @s  g  y  @h  @a  e  i  ent  \    ent
+  @cw2   @n  @r  @t  @s  g  y  @h  @a  e  i  ent  \    ent
   lsft   q   m   v   c   x  p  k   .   -  /   rsft
   lctl _  _  lalt     @spc     ralt rctl
 )
@@ -20,7 +20,7 @@
 (deflayer graphite-angle-vc-no-mods
   @grv   1   2   3  4  5  6  7  8  9  0  -  =  bspc
   tab    b   l   d  w  z  '  f  o  u  j  ;  @sft
-  @cw    n   r   t  s  g  y  h  a  e  i  ,  \  ent
+  @cw   n   r   t  s  g  y  h  a  e  i  ,  \  ent
   lsft   q   m   v  c  x  p  k  .  -  /    rsft
   lctl _  _  lalt     spc     ralt rctl
 )
@@ -93,11 +93,19 @@
 
 (deflayer symbols-5
   _       `  @s9 @s0 ;   ,   _   _   _   _   _  _  _ _
-  @!      @{  '   @dq  @}  @?  XX  spc  up  bks @& @! @$  
-  @#      @^  =   @_  @$  @*  @:  lft down rght  ent  @# XX _ 
-  @@      @<  @|  -   @>  /  .  @*  =   @? @! _  
+  @!      @{  '   @dq  @}  @?  XX  7 8 9 @& @! @$  
+  @#      @^  =   @_  @$  @*  @:   4 5 6  ent  @# XX _ 
+  @@      @<  @|  -   @>  /  .     1 2 3 @! _  
   @~   @& [  ]        @+        _ _
 )  
+
+(deflayer symbols-6
+  _       `  _ _ ;   ,   _   _   _   _   _  _  _ _
+  @!      @{  @s9 @s0  @}  @?  XX  @+ . @:  @% @! @$  
+  @#      @^  =   @_  @$  @*  XX   , @dq ' ;  @# XX _ 
+  @@      @<  @|  -   @>  /   \     [ ] @& XX _  
+  @~   _ XX  XX        @+        _ _
+) 
 
 ;;symbols2
 (deflayer symbols2
@@ -112,7 +120,7 @@
   _      _  _  _  _  _  _  _   _    _    _  _  _  _
   _      _  spc bks  ent  _  _  ent  up  ent  del  _  _  
   _      _  _  _  _  _  bks lft down rght bks  _  _ _
-  _      _  _  _  _  _  _  _   _     _    _    _  
+  _      _  _  _  _  _  ent  _   _     _    _    _  
   _  _ _  _        _        _ _
 ) 
 
@@ -120,9 +128,36 @@
   _      _  _  _  _  _  _  _   up    _    _  _  _  _
   _      _  _  _  _  _  _  lft  down  rght  del  _  _  
   _      _  _  _  _  _  _  del bks rght bks  _  _ _
-  _      _  _  _  _  _  _  _   _     _    _    _  
+  _      _  _  _  _  _  _  _   ent     _    _    _  
   _  _ _  _        _        _ _
 ) 
+
+(deflayer misc-3
+  _      _  _   _   _   _  _   _   _   _   _   _ _ _
+  _      _  spc bks ent _  _   @cy ent ent del _ _  
+  _      _  _   _   _   _  bks @cz bks bks ent _ _ _
+  _      _  _   _   _   _  ent _   _   _   _    _  
+  _  _ _  _        _        _ _
+)
+
+(deflayer misc-4
+  _      _  _   _   _   _  _   _   _   _   _   _ _ _
+  _      _  spc ent @cy _  _   @cy up ent del _ _  
+  _      _  _  bks  @cz   _  bks lft down rght ent _ _ _
+  _      _  _   _   _   _  ent _   _   _   _    _  
+  _  _ _  _        _        _ _
+)  
+
+
+(deflayer rows
+  _      _  _   _   _   _  _   _   _   _   _   _ _ _
+  _      _  spc @ctv @ctc _  _   @ctx up ent del _ _  
+  _      @cs2  _   lctl   _   _  bks lft down rght ent _ _ _
+  _      _  _   _   _   _  ent _   _   _   _    _  
+  _  _ _  _        _        _ _
+)  
+
+ 
 
 (deflayer numbers
   _      _  _  _  _  _  _  7  8  9  _    _  _  _
@@ -135,7 +170,7 @@
 (deflayer numbers-2
   _      _  _  _  _  _  _  @*  /  XX  _    _  _  _
   _      _  _  _  _  _  _  7   8  9   min  _  _  
-  _      ent  _  bks  spc  _  _  4   5  6   +    _  _  _
+  _      ent  _  bks  spc  _  bks  4   5  6   ;    _  _  _
   _      _  _  _  _  _  0  1   2  3   ent  _  
   _ _ _   _        .        _ _
 )
@@ -144,12 +179,12 @@
 
 ;;deflocalkeys-win
 
+
 (deflocalkeys-win
     ;;kana 255
 	fn 255
 	
 )
-
 
 ;; crear capa para vocales con tilde y letra n
 ;; queda pendiente
@@ -181,7 +216,22 @@
    <  S-, 
    >  S-. 
    ?  S-/
+   
 )
+
+;;deshacer y rehacer
+;;ctrl-z ctrl-y
+(defalias
+ cz C-z
+ cy C-y
+ 
+ cs  C-S-1
+ cs2 (multi lctl lsft )
+ ctc C-c
+ ctv C-v
+ ctx C-x
+)
+
 
 
 ;;layers toggle and
@@ -189,8 +239,8 @@
 ;;alias para home rows y
 (defalias
   lay (layer-toggle layouts)
-  sym (layer-toggle symbols-5)
-  msc (layer-toggle misc)
+  sym (layer-toggle symbols-6)
+  msc (layer-toggle misc-3)
   num (layer-toggle numbers-2)
   
   qw  (layer-switch qwerty-en)
@@ -200,22 +250,25 @@
   
   sym2 (layer-toggle symbols2)
   sp (layer-toggle symbols-4)
+  rws ( layer-toggle rows)
+  
+  msc2 (layer-toggle misc-4)
 
 
 
   n (tap-hold-release 200 200 n @msc )   ;;n (tap-hold-release 200 200 n @msc )
-  r (tap-hold-release 200 200 r @num )
-  t (tap-hold-release 200 200 t @sym )
-  s (tap-hold-release 200 200 s lsft)
+  r (tap-hold-release 200 200 r @rws )
+  t (tap-hold-release 200 200 t @msc )
+  s (tap-hold-release 200 200 s @rws)
 
   ;;h (tap-hold-release 200 200 h lsft)
-  h (tap-hold-release 200 200 h @sym2)
-  a (tap-hold-release 200 200 a @sym )
+  h (tap-hold-release 200 200 h @msc2 )
+  a (tap-hold-release 200 200 a @msc2 )
   i (tap-hold-release 200 200 i @sym )
   
   grv (tap-hold-release 200 200 ` @lay) 
   
-  spc (tap-hold-release 200 200 spc @sym )
+  spc (tap-hold-release 200 200 spc  @sym )
 
   cc (caps-word-custom
        4000
@@ -224,6 +277,10 @@
       )
   ;;cw (tap-hold 200 200 (caps-word 2000) lsft )
   cw (tap-hold 200 200 @cc lsft )
+  cw2 (tap-hold 200 200 
+         (one-shot 5000 rsft) 
+          @cc 
+	   )
   
 
 )
