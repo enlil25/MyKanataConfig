@@ -12,8 +12,8 @@
 (deflayer graphite-angle-vc
   @grv   1   2   3   4   5  6  7   8   9  0  -  =    bspc
   tab    b   l   d   w   z  '  f   o   u  j  @sft  bks
-  @cw2   @n  @r  @t  @s  g  y  @h  @a  e  i  ent  \    ent
-  lsft   q   m   v   c   x  p  k   .   -  /   rsft
+  @cw    @n  @r  @t  @s  g  y  @h  @a  e  i  ent  \    ent
+  lsft   q   m   v   @c   x  p  k   .   -  /   rsft
   lctl _  _  lalt     @spc     ralt rctl
 )
 
@@ -52,7 +52,7 @@
 ) 
 
 (deflayer layouts
-  _     @qw @gf @gfn lrld @test  _  _  _  _  _  _  _  _
+  _     @qw @gf @gfn lrld @test @testn  _  _  _  _  _  _  _
   _      _  _    _    _  _  _  _  _  _  _  _  _  
   _      _  _  _  _   _  _  _  _  _  _  _  _  _
   _      _  _  _  _   _  _  _  _  _  _    _  
@@ -175,6 +175,14 @@
   _ _ _   _        .        _ _
 )
 
+(deflayer numbers-3
+  @grv   _   _   _   _    _  _   XX  XX  XX _    _  _  _
+  _      kp/ kp* kp- kp+  _  _   7   8   9  XX  _  _  
+  _      _   _   _   .    _  _   4   5   6  ent    _  _  _
+  _      _   _   _   _    _  XX  1   2   3  ent  _  
+  _ _ _   _        0        _ _
+)
+
 
 
 ;;deflocalkeys-win
@@ -247,6 +255,7 @@
   gf  (layer-switch graphite-angle-vc)
   gfn (layer-switch graphite-angle-vc-no-mods )
   test (layer-switch graphite-mod2)
+  testn (layer-switch numbers-3)
   
   sym2 (layer-toggle symbols2)
   sp (layer-toggle symbols-4)
@@ -258,11 +267,10 @@
 
   n (tap-hold-release 200 200 n @msc )   ;;n (tap-hold-release 200 200 n @msc )
   r (tap-hold-release 200 200 r @rws )
-  t (tap-hold-release 200 200 t @msc )
-  s (tap-hold-release 200 200 s @rws)
+  t (tap-hold-release 200 200 t @rws )
+  s (tap-hold-release 200 200 s lsft)
 
-  ;;h (tap-hold-release 200 200 h lsft)
-  h (tap-hold-release 200 200 h @msc2 )
+  h (tap-hold-release 200 200 h rsft )
   a (tap-hold-release 200 200 a @msc2 )
   i (tap-hold-release 200 200 i @sym )
   
@@ -280,7 +288,8 @@
   cw2 (tap-hold 200 200 
          (one-shot 5000 rsft) 
           @cc 
-	   )
+	   )   
+  c (tap-hold-release 200 200 c (layer-toggle numbers-3) )   
   
 
 )
