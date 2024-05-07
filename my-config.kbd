@@ -101,11 +101,12 @@
 
 (deflayer symbols-6
   _       `  _ _ ;   ,   _   _   _   _   _  _  _ _
-  @!      @{  @s9 @s0  @}  @?  XX  @+ . @:  @% @! @$  
+  @!      @+  @s9 @s0  .  @?  XX  @{ @} @:  @% @! @$  
   @#      @^  =   @_  @$  @*  XX   , @dq ' ;  @# XX _ 
   @@      @<  @|  -   @>  /   \     [ ] @& XX _  
   @~   _ XX  XX        @+        _ _
-) 
+)
+
 
 ;;symbols2
 (deflayer symbols2
@@ -176,12 +177,21 @@
 )
 
 (deflayer numbers-3
-  @grv   _   _   _   _    _  _   XX  XX  XX _    _  _  _
+  @grv   _   _   [   ]    _  _   XX  XX  XX _    _  _  _
   _      kp/ kp* kp- kp+  _  _   7   8   9  XX  _  _  
-  _      _   _   _   .    _  _   4   5   6  ent    _  _  _
-  _      _   _   _   _    _  XX  1   2   3  ent  _  
+  _      @:  =   ,   .    _  _   4   5   6  ent    _  _  _
+  _      _   _   _   _    _  @su 1   2   3  ent  _  
   _ _ _   _        0        _ _
 )
+
+(deflayer numbers-3-sub
+  @grv   _   _   XX  XX    _  _   XX  XX  XX _    _  _  _
+  _      kp/ kp* [   ]     _  _   7   8   9  XX  _  _  
+  _      @:  =   @s9 @s0   _  _   4   5   6  ent    _  _  _
+  _      _   _   _   _     _  XX  1   2   3  ent  _  
+  _ _ _   _        0        _ _
+)
+
 
 
 
@@ -289,7 +299,9 @@
          (one-shot 5000 rsft) 
           @cc 
 	   )   
-  c (tap-hold-release 200 200 c (layer-toggle numbers-3) )   
+  c (tap-hold-release 200 200 c (layer-toggle numbers-3) )  
+
+  su (layer-toggle numbers-3-sub)  
   
 
 )
