@@ -1,0 +1,193 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+  grv    1  2  3  4  5  6  7  8  9  0  -   =  bspc
+  tab    q  w  e  r  t  y  u  i  o  p  [   ]
+  caps   a  s  d  f  g  h  j  k  l  ;  '   \  ent
+  lsft   z  x  c  v  b  n  m  ,  .  /    rsft
+  lctl  lmeta lalt     spc     ralt rctl                               
+) 
+
+(deflayer graphite-angle-vc
+  @grv   b   l   d   w   z  '    f   o   u  j  -  =    bspc
+  @sft    n   r   t   s  g  y     h   a  e  i  @sft  @sft
+  @cw    q   m   v   c  x  p    k   .   -  /  rsft  \    ent
+  lsft   XX  XX  spc spc ent @sy  m   XX  XX XX rsft
+  lctl   _  lalt     spc     ralt rctl
+)
+
+
+(deflayer qwerty-en
+  @grv   _  _  _  _  _  _  _  _  _  _  _  _  _
+  _      _  _  _  _  _  _  _  _  _  _  _  _  
+  _      _  _  _  _  _  _  _  _  _  _  _  _  _
+  _      _  _  _  _  _  _  _  _  _  _    _  
+  _  _   _        _        _ _
+) 
+
+(deflayer layouts
+  _     @qw @gf lrld @testn _ _  _  _  _  _  _  _  _
+  _      _  _    _    _  _  _  _  _  _  _  _  _  
+  _      _  _  _  _   _  _  _  _  _  _  _  _  _
+  _      _  _  _  _   _  _  _  _  _  _    _  
+  _   _  _        _        _ _
+)
+ 
+
+(deflayer symbols-6
+  @!      @{  @s9 @s0 @}  @?  XX  @+ .   @: @% @! @$ _  
+  @#      @^  =   @_  @$  @*  XX   , @dq '  ;  @# XX  
+  @@      @<  @|  -   @>  /   \    [ ]   @& XX XX XX ent  
+  @~    XX  XX        spc   spc _
+   XX       `   XX   XX  XX   spc   XX   XX  XX   XX  XX  XX
+)
+
+
+(deflayer misc-4
+  _      _  _   _   _   _  _   _   _   _   _   _ _ _
+  _      _  spc ent @cy _  _   @cy up ent del _ _  
+  _      _  _  bks  @cz   _  bks lft down rght ent _ _ _
+  _      _  _   _   _   _  ent _   _   _   _    _  
+  _   _  _        _        _ _
+)  
+
+
+(deflayer rows
+  _      _  _   _   _   _  _   _   _   _   _   _ _ _
+  _      _  spc @ctv @ctc _  _   @ctx up ent del _ _  
+  _      @cs2  _   lctl   _   _  bks lft down rght ent _ _ _
+  _      _  _   _   _   _  ent _   _   _   _    _  
+  _   _  _        _        _ _
+)  
+
+(deflayer numbers-3
+  _      kp/ kp* kp- kp+  _  _   7   8   9  XX  _  _  
+  _      @:  =   ,   .    _  _   4   5   6  ent    _  _  _
+  _      _   _   _   _    _  @su 1   2   3  ent  _  
+  _  _   _        0        _ _
+  @grv   _   _   [   ]    _  _   XX  XX  XX _    _  _  _
+)
+
+(deflayer numbers-3-sub
+  
+  _      kp/ kp* [   ]     _  _   7   8   9  XX  _  _  
+  _      @:  =   @s9 @s0   _  _   4   5   6  ent    _  _  _
+  _      _   _   _   _     _  XX  1   2   3  ent  _  
+  _  _   _        0        _ _
+  @grv   _   _   XX  XX    _  _   XX  XX  XX _    _  _  _
+)
+
+
+
+
+
+;; crear capa para vocales con tilde y letra n
+;; queda pendiente
+
+
+;;alias para chords de salida
+;;utilizado por el layer de simbolos
+(defalias
+   ~  S-`
+   !  S-1
+   @  S-2
+   #  S-3
+   $  S-4
+   %  S-5
+   ^  S-6
+   &  S-7
+   *  S-8
+   s9 S-9 ;; (
+   s0 S-0 ;;  )
+   _  S--
+   +  S-=
+  
+   {  S-[
+   }  S-]
+   :  S-;
+   dq S-' ;; "
+   |  S-\ 
+
+   <  S-, 
+   >  S-. 
+   ?  S-/
+   
+)
+
+;;deshacer y rehacer
+;;ctrl-z ctrl-y
+(defalias
+ cz C-z
+ cy C-y
+ 
+ cs  C-S-1
+ cs2 (multi lctl lsft )
+ ctc C-c
+ ctv C-v
+ ctx C-x
+)
+
+
+
+;;layers toggle and
+;;layers switch
+;;alias para home rows y
+(defalias
+  lay (layer-toggle layouts)
+  sym (layer-toggle symbols-6)
+  
+  qw  (layer-switch qwerty-en)
+  gf  (layer-switch graphite-angle-vc)
+  testn (layer-switch numbers-3)
+  
+  rws ( layer-toggle rows)
+  
+  msc2 (layer-toggle misc-4)
+
+
+  r (tap-hold-release 200 200 r @rws )
+  t (tap-hold-release 200 200 t @rws )
+  s (tap-hold-release 200 200 s lsft)
+
+  h (tap-hold-release 200 200 h rsft )
+  a (tap-hold-release 200 200 a @msc2 )
+  i (tap-hold-release 200 200 i @sym )
+  
+  grv (tap-hold-release 200 200 ` @lay) 
+  
+  spc (tap-hold-release 200 200 spc  @sym )
+  sy (layer-toggle symbols-6)
+  v (layer-toggle numbers-3)
+ 
+  
+
+  cc (caps-word-custom
+       4000
+       (a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9)
+       (kp0 kp1 kp2 kp3 kp4 kp5 kp6 kp7 kp8 kp9 bspc del up down left rght lsft -)
+      )
+  ;;cw (tap-hold 200 200 (caps-word 2000) lsft )
+  cw (tap-hold 200 200 @cc lsft )
+  cw2 (tap-hold 200 200 
+         (one-shot 5000 rsft) 
+          @cc 
+	   )   
+  c (tap-hold-release 200 200 c (layer-toggle numbers-3) )  
+
+  su (layer-toggle numbers-3-sub)  
+  
+
+)
+
+;;alias en tecla para one-shot de shift
+;;util para capitalizar palabras
+;;y cuando hay un solo simbolo en una palabra
+(defalias
+  sft (one-shot 5000 rsft) 
+
+)
+
+
+
+

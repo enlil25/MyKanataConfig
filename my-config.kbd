@@ -11,8 +11,8 @@
 
 (deflayer graphite-angle-vc
   @grv   1   2   3   4   5  6  7   8   9  0  -  =    bspc
-  tab    b   l   d   w   z  '  f   o   u  j  @sft  bks
-  @cw    @n  @r  @t  @s  g  y  @h  @a  e  i  ent  \    ent
+  tab    b    l   d   w   z  '  f   o   u  j  @sft  bks
+  @cw    n   r  @t  @s  g  y  @h  @a  e  i  ent  \    ent
   lsft   q   m   v   @c   x  p  k   .   -  /   rsft
   lctl _  _  lalt     @spc     ralt rctl
 )
@@ -20,7 +20,7 @@
 (deflayer graphite-angle-vc-no-mods
   @grv   1   2   3  4  5  6  7  8  9  0  -  =  bspc
   tab    b   l   d  w  z  '  f  o  u  j  ;  @sft
-  @cw   n   r   t  s  g  y  h  a  e  i  ,  \  ent
+  @cw    n   r   t  s  g  y  h  a  e  i  ,  \  ent
   lsft   q   m   v  c  x  p  k  .  -  /    rsft
   lctl _  _  lalt     spc     ralt rctl
 )
@@ -104,7 +104,7 @@
   @!      @{  @s9 @s0 @}  @?  XX  @+ .   @: @% @! @$  
   @#      @^  =   @_  @$  @*  XX   , @dq '  ;  @# XX _ 
   @@      @<  @|  -   @>  /   \    [ ]   @& XX _  
-  @~   _ XX  XX        @+        _ _
+  @~   _ XX  XX        spc        _ _
 )
 
 
@@ -200,7 +200,7 @@
 
 (deflocalkeys-win
     ;;kana 255
-	fn 255
+	fn 120
 	
 )
 
