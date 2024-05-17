@@ -11,9 +11,9 @@
 
 (deflayer graphite-angle-vc
   @grv   1   2   3   4   5  6  7   8   9  0  -  =    bspc
-  tab    b    l   d   w   z  '  f   o   u  j  @sft  bks
-  @cw    n   r  @t  @s  g  y  @h  @a  e  i  ent  \    ent
-  lsft   q   m   v   @c   x  p  k   .   -  /   rsft
+  tab    b   l   d   w   z  '  f   o   u  j  @sft  bks
+  @cw    n   r   @t  @s  g  y  @h  @a  e  i  ent  ent    ent
+  lsft   q   m   v   @c  x  p  k   .   -  /  rsft
   lctl _  _  lalt     @spc     ralt rctl
 )
 
@@ -102,7 +102,7 @@
 (deflayer symbols-6
   _       `   _   _   ;   ,   _   _  _   _  _  _  _ _
   @!      @{  @s9 @s0 @}  @?  XX  @+ .   @: @% @! @$  
-  @#      @^  =   @_  @$  @*  XX   , @dq '  ;  @# XX _ 
+  @#      @^  =   @_  @$  @*  spc  , @dq '  ;  ent ent _ 
   @@      @<  @|  -   @>  /   \    [ ]   @& XX _  
   @~   _ XX  XX        spc        _ _
 )
