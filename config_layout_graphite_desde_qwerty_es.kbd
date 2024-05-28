@@ -6,12 +6,29 @@
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
+(deflayer graphite-2
+  ´´      1    2    3    4    5    6    7    8    9    0    '    ¿  bspc
+  tab     b    l    d    w    z    '    f    o    u    j    XX   +  
+  @cw     n    r    t    s    g    y    h    a    e    i    {    @}  ent
+  lsft <  q    m    v    c    x    p    k    ,    .    -  rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
 (deflayer graphite
   |       1    2    3    4    5    6    7    8    9    0    S-'  S-¿  bspc
   tab     b    l    d    w    z    '    f    o    u    j    S-,  S-0  
   caps    n    r    t    s    g    y    h    a    e    i    ,    C-A-'  ent
   lsft <  q    m    v    c    x    p    k    .    -    S-7  rsft
   lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer letras_acentuadas
+  XX      XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX    XX  XX
+  XX      XX   XX   XX   XX   XX   XX   XX   @o   @u   XX   XX    XX 
+  XX      ñ    XX   XX   XX   XX   XX   XX   @a   @e   @i   XX    XX  XX
+  XX XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX    XX
+  XX XX XX           XX            XX XX XX  
+
 )
 
 ;; el codigo de la tecla tiene el mismo valor en dos distribuciones qwerty ( español e ingles)
@@ -31,3 +48,18 @@
    <  226
    ,  188 
 )
+
+(defalias
+   cw (tap-hold 200 200 caps (layer-toggle letras_acentuadas) )
+   } (tap-hold 200 200 } (layer-toggle letras_acentuadas) )
+   a  ( macro ´´ a)
+   e  ( macro ´´ e)
+   i  ( macro ´´ i)
+   o  ( macro ´´ o)
+   u  ( macro ´´ u)
+
+)
+			
+
+
+

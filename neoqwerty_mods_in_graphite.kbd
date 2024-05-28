@@ -1,0 +1,62 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+  grv      1   2   3   4   5   6   7   8   9   0   -   =  bspc
+  tab      q   w   e   r   t   y   u   i   o   p   [   ]
+  caps     a   s   d   f   g   h   j   k   l   ;   '   \  ent
+  lsft <>  z   x   c   v   b   n   m   ,   .   /     rsft
+  lctl lmeta lalt           spc                  ralt rctl                               
+) 
+
+(deflayer graphite-angle-vc-layer
+  grv      1   2   3   4   5   6   7   8   9   0   [   ]  bspc
+  tab      b   l   d   w   z   '   f   o   u   j   ;   =
+  @cl      n   r   t   s   g   y   h   a   e   i   ,   @\  ent
+  lsft <>  q   m   v   c   x   p   k   .   -   /     rsft
+  lctl lmeta lalt           spc                   ralt rctl 
+
+)
+
+(deflayer mod3
+  grv      1   2   3   4   5   6   7   ,  9   0   -   =  bspc
+  tab      .   @_  [   ]   @^  @!  @<  @>  =   @&  XX  XX
+  caps     \   /   @{  @}  @*  @?  @C  @Ɔ  -   @:  @@  XX  ent
+  lsft <>  @#  @$  @|  @~  `   +   @%  @ʺ  '   ;    rsft
+  lctl lmeta lalt           spc                  ralt rctl  
+)
+
+
+(deflocalkeys-win
+  <> 226
+)
+
+(defalias
+  cl (tap-hold 200 200 caps (layer-toggle mod3) )
+  \ (tap-hold 200 200 \ (layer-toggle mod3) )
+  
+  _  S--
+  ^  S-6
+  !  S-1
+  <  S-, 
+  >  S-. 
+  &  S-7
+  {  S-[
+  }  S-]
+  *  S-8
+  ?  S-/ 
+  C  S-9
+  Ɔ  S-0
+  @  S-2
+  :  S-;
+  #  S-3
+  $  S-4
+  |  S-\
+  ~  S-`
+  %  S-5
+  ʺ  S-'
+)
+
+
+
+
